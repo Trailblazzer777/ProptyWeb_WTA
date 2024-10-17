@@ -2,6 +2,10 @@
   Note: These are temporary previews of the images. 
   They're active for 10-15 days only. You should replace them with the actual images before using the code in production.
 */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --image-0: url(./graphics/graphics0.png);
   --image-1: url(./graphics/graphics1.png);
@@ -207,6 +211,30 @@ body {
   white-space: pre-wrap;
   color: #1a1a1aff;
 }
+
+.home-1272026-0:hover,
+.listings-1272029-0:hover,
+.members-1272032-0:hover,
+.blog-1272035-0:hover,
+.pages-1272038-0:hover,
+.item--link--con-1272040-0:hover {
+  color: #f0a500; /* Change text color on hover */
+  background-color: rgba(240, 165, 0, 0.1); /* Light background change on hover */
+  cursor: pointer;
+}
+
+/* Clicky effect when pressed */
+.home-1272026-0:active,
+.listings-1272029-0:active,
+.members-1272032-0:active,
+.blog-1272035-0:active,
+.pages-1272038-0:active,
+.item--link--con-1272040-0:active {
+  transform: scale(0.95); /* Scale down slightly to give a "pressed" effect */
+  background-color: rgba(240, 165, 0, 0.2); /* Slightly darker background when pressed */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Add shadow for depth */
+}
+
 .after-1272027 {
   width: 13.55%;
   height: 4.98%;
@@ -535,7 +563,7 @@ body {
   overflow: hidden;
 }
 .link-1272060 {
-  width: 7.72%;
+  width: 9.72%;
   height: 52.22%;
   top: 23.27%;
   left: 89.16%;
@@ -548,19 +576,38 @@ body {
   border-right: 1px solid #1a1a1aff;
   border-top: 1px solid #1a1a1aff;
   border-bottom: 1px solid #1a1a1aff;
+  background-color: rgb(44, 69, 170);
 }
+
 .add-property-1272061 {
-  width: 59.75%;
-  height: 67.06%;
-  top: 15.88%;
-  left: 17.54%;
-  opacity: 1;
-  z-index: 0;
-  transform: rotate(0deg);
-  text-align: center;
-  line-height: 0px;
+  width: 100%;
+    height: 100%;
+    top: -0.12%;
+    left: 0.54%;
+    opacity: 1;
+    z-index: 0;
+    transform: rotate(0deg);
+    text-align: center;
+    line-height: 0px;
+    border-radius: 50px 50px 50px 50px;
+    box-sizing: border-box;
+    border-left: 1px solid #1a1a1aff;
+    border-right: 1px solid #1a1a1aff;
+    border-top: 1px solid #1a1a1aff;
+    border-bottom: 1px solid #1a1a1aff;
+  color: rgb(44, 69, 170);
 }
-.add-property-1272061-0,
+.add-property-1272061:hover {
+  color: white;
+  background-color: rgb(44, 69, 170);
+}
+
+.add-property-1272061:active {
+  color: white;
+  background-color: rgb(44, 69, 170);
+  transform: scale(0.95);
+}
+
 .filters-1271984-0,
 .read-more-127827-0,
 .read-more-127838-0,
@@ -582,7 +629,7 @@ body {
   width: 2.08%;
   height: 49.15%;
   top: 24.81%;
-  left: 86.03%;
+  left: 85.03%;
   opacity: 1;
   z-index: 4;
   transform: rotate(0deg);
@@ -621,7 +668,7 @@ body {
   width: 1.04%;
   height: 24.57%;
   top: 37.09%;
-  left: 77.71%;
+  left: 74.71%;
   opacity: 1;
   z-index: 2;
   transform: rotate(0deg) scaleY(-1);
@@ -664,10 +711,10 @@ body {
   overflow: hidden;
 }
 .c-68-685-88666-1272056 {
-  width: 5.64%;
+  width: 7.64%;
   height: 23.59%;
   top: 37.46%;
-  left: 79.37%;
+  left: 76.37%;
   opacity: 1;
   z-index: 3;
   transform: rotate(0deg);
@@ -968,6 +1015,17 @@ body {
   border-top: 1px solid #254ef0ff;
   border-bottom: 1px solid #254ef0ff;
 }
+.button-1271985:hover {
+  background-color: #1a1a1aff;
+  color: #ffffff;
+}
+
+.button-1271985:active {
+  background-color: #1a1a1aff;
+  color: #ffffff;
+  transform: scale(0.95);
+}
+
 .search-1271986 {
   width: 43.19%;
   height: 52.29%;
@@ -1031,7 +1089,7 @@ body {
   transform: rotate(0deg);
   overflow: hidden;
 }
-.enter-keywords-1271982 {
+/* .enter-keywords-1271982 {
   width: 22.26%;
   height: 100%;
   top: 0%;
@@ -1054,7 +1112,7 @@ body {
   text-transform: none;
   white-space: pre-wrap;
   color: #1a1a1aff;
-}
+} */
 .presentation-1271978 {
   width: 0.75%;
   height: 5.29%;
@@ -1065,6 +1123,69 @@ body {
   transform: rotate(0deg);
   box-sizing: border-box;
 }
+/* Dropdown for Type */
+#type-select {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: calc(15 * var(--ratio));
+  line-height: calc(28 * var(--ratio));
+  font-family: Roboto;
+  color: #1a1a1aff;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+/* Filters Dropdown */
+#filter-options {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 100%; /* Position below the filter button */
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #e9e9e9ff;
+  padding: 10px;
+}
+
+.link-1271983:hover #filter-options {
+  display: block; /* Show on hover */
+  width: 100px;
+  position: absolute;
+}
+
+/* Input Field */
+#keyword-input {
+  font-size: calc(15 * var(--ratio));
+
+  line-height: calc(15 * var(--ratio));
+
+  font-family: Roboto;
+  font-weight: 400;
+  position: relative;
+  text-decoration: none;
+  text-transform: none;
+  white-space: pre-wrap;
+  color: #1a1a1aff;
+  text-align: left;
+  line-height: 0px;
+  width: 98.48%;
+  height: 90.56%;
+  top: 0.22%;
+  left: 0.26%;
+  opacity: 1;
+  z-index: 3;
+  transform: rotate(0deg);
+  border-radius: 50px 50px 50px 50px;
+  border-left: 1px solid #e9e9e9ff;
+  border-right: 1px solid #e9e9e9ff;
+  border-top: 1px solid #e9e9e9ff;
+  border-bottom: 1px solid #e9e9e9ff;
+}
+
+/* Search Button - Keep existing CSS */
+
+
 .heading-2--expl-1271517 {
   width: 21.04%;
   height: 0.58%;
@@ -1123,7 +1244,27 @@ body {
   transform: rotate(0deg);
   overflow: hidden;
   border-radius: 16px 16px 16px 16px;
+  transition: transform 0.3s ease;
 }
+.link-1271519:hover,
+.link-1271524:hover,
+.link-1271529:hover,
+.link-1271534:hover,
+.link-1271539:hover,
+.link-1271544:hover {
+  transform: scale(1.1);
+}
+
+.link-1271519,
+.link-1271524,
+.link-1271529,
+.link-1271534,
+.link-1271539,
+.link-1271544{
+  transition: transform 0.3s ease;
+}
+
+
 .before-1271521,
 .before-1271526,
 .before-1271531,
@@ -1456,6 +1597,20 @@ body {
   border-radius: 16px 16px 16px 16px;
   background: #f9f9f9ff;
 }
+.divelementorele-1271547,
+.divelementorele-1271552,
+.divelementorele-1271557,
+.divelementorele-1271562{
+  transition: transform 0.3s ease;
+}
+
+.divelementorele-1271547:hover,
+.divelementorele-1271552:hover,
+.divelementorele-1271557:hover,
+.divelementorele-1271562:hover {
+  transform: scale(1.1);
+}
+
 .c-52m-1271548 {
   width: 28.1%;
   height: 12.68%;
@@ -1700,7 +1855,22 @@ body {
   transform: rotate(0deg);
   overflow: hidden;
   background: #ffffffff;
+  transition: transform 0.3s ease;
 }
+
+.tabpanel--artic-1271570,
+.tabpanel--artic-1271592,
+.tabpanel--artic-1271615{
+  transition: transform 0.3s ease;
+}
+
+
+.tabpanel--artic-1271570:hover,
+.tabpanel--artic-1271592:hover,
+.tabpanel--artic-1271615:hover {
+  transform: scale(1.05);
+}
+
 .divpropertythum-1271588,
 .divpropertythum-1271611,
 .divpropertythum-1271633 {
@@ -2577,8 +2747,26 @@ body {
   left: 1.05%;
   opacity: 1;
   z-index: 0;
-  transform: rotate(0deg);
+  transform: rotate(0deg) ;
 }
+
+.link-1271659:hover,
+.link-1271664:hover,
+.link-1271669:hover,
+.link-1271674:hover,
+.link-1271679:hover {
+  cursor: pointer;
+  transform:scale(1.1); ;
+}
+
+.link-1271659,
+.link-1271664,
+.link-1271669,
+.link-1271674,
+.link-1271679 {
+  transition: transform 0.3s;
+}
+
 .divlocationbann-1271660,
 .divlocationbann-1271665,
 .divlocationbann-1271670,
@@ -2875,6 +3063,31 @@ body {
   overflow: hidden;
   background: #ffffffff;
 }
+
+.tabpanel--artic-1271693,
+.tabpanel--artic-1271718,
+.tabpanel--artic-1271743,
+.tabpanel--artic-1271768,
+.tabpanel--artic-1271809,
+.tabpanel--artic-1271831,
+.tabpanel--artic-1271855,
+.tabpanel--artic-1271879{
+  transition: transform 0.3s;
+}
+
+.tabpanel--artic-1271693:hover,
+.tabpanel--artic-1271718:hover,
+.tabpanel--artic-1271743:hover,
+.tabpanel--artic-1271768:hover,
+.tabpanel--artic-1271809:hover,
+.tabpanel--artic-1271831:hover,
+.tabpanel--artic-1271855:hover,
+.tabpanel--artic-1271879:hover {
+  cursor: pointer;
+  transform:scale(1.1); ;
+}
+
+
 .divpropertythum-1271712,
 .divpropertythum-1271737,
 .divpropertythum-1271762,
@@ -9335,6 +9548,7 @@ body {
   transform: rotate(0deg);
   border-radius: 25px 25px 25px 25px;
   background: #222121ff;
+  border: 1px solid #ffffffff;
 }
 .svg-1272063 {
   width: 22%;

@@ -23,38 +23,38 @@
         <!-- element3 -->
         <section class="element-1272023 pos-abs" id="id-1272023">
           <div class="list-1272024 pos-abs" id="id-1272024">
-            <nav class="item--link-1272025 pos-abs" id="id-1272025">
+            <div class="item--link-1272025 pos-abs" id="id-1272025">
               <div class="home-1272026 pos-abs" id="id-1272026">
-                <!-- prettier-ignore --><span  class="home-1272026-0 ">Home </span>
+                <!-- prettier-ignore --><a  class="home-1272026-0 " href="#">Home </a>
               </div>
               <div class="after-1272027 pos-abs" id="id-1272027"></div>
-            </nav>
+            </div>
             <div class="item--link-1272028 pos-abs" id="id-1272028">
               <div class="listings-1272029 pos-abs" id="id-1272029">
-                <!-- prettier-ignore --><span  class="listings-1272029-0 ">Listings </span>
+                <!-- prettier-ignore --><a  class="listings-1272029-0 "href="#id-1271517">Listings </a>
               </div>
               <div class="after-1272030 pos-abs" id="id-1272030"></div>
             </div>
             <div class="item--link-1272031 pos-abs" id="id-1272031">
               <div class="members-1272032 pos-abs" id="id-1272032">
-                <!-- prettier-ignore --><span  class="members-1272032-0 ">Members </span>
+                <!-- prettier-ignore --><a  class="members-1272032-0 "href="#id-1271690">Recents </a>
               </div>
               <div class="after-1272033 pos-abs" id="id-1272033"></div>
             </div>
             <div class="item--link-1272034 pos-abs" id="id-1272034">
               <div class="blog-1272035 pos-abs" id="id-1272035">
-                <!-- prettier-ignore --><span  class="blog-1272035-0 ">Blog </span>
+                <!-- prettier-ignore --><a  class="blog-1272035-0 "href="#id-1271945">Blog </a>
               </div>
               <div class="after-1272036 pos-abs" id="id-1272036"></div>
             </div>
             <div class="item--link-1272037 pos-abs" id="id-1272037">
               <div class="pages-1272038 pos-abs" id="id-1272038">
-                <!-- prettier-ignore --><span  class="pages-1272038-0 ">Pages </span>
+                <!-- prettier-ignore --><a  class="pages-1272038-0 "href="#id-1271654">Pages </a>
               </div>
               <div class="after-1272039 pos-abs" id="id-1272039"></div>
             </div>
             <div class="item--link--con-1272040 pos-abs" id="id-1272040">
-              <!-- prettier-ignore --><span  class="item--link--con-1272040-0 ">Contact</span>
+              <!-- prettier-ignore --><a  class="item--link--con-1272040-0 "href="#id-127914">Contact</a>
             </div>
           </div>
           <div class="logosvg-1272041 pos-abs" id="id-1272041">
@@ -124,9 +124,9 @@
             </div>
           </div>
           <div class="link-1272060 pos-abs" id="id-1272060">
-            <div class="add-property-1272061 pos-abs" id="id-1272061">
+            <button class="add-property-1272061 pos-abs" id="id-1272061">
               <!-- prettier-ignore --><span  class="add-property-1272061-0 ">Add Property</span>
-            </div>
+            </button>
           </div>
           <div class="link-1272057 pos-abs" id="id-1272057">
             <div class="icon-1272058 pos-abs" id="id-1272058">
@@ -180,33 +180,43 @@
                 </div>
               </div>
               <div class="divsearchformin-1271974 pos-abs" id="id-1271974">
+                <!-- Dropdown for Type -->
                 <div class="combobox-menu-1271975 pos-abs" id="id-1271975">
                   <div class="textbox-1271976 pos-abs" id="id-1271976">
-                    <div class="type-1271977 pos-abs" id="id-1271977">
-                      <!-- prettier-ignore --><span  class="type-1271977-0 ">Type</span>
-                    </div>
+                    <select id="type-select" class="type-1271977 pos-abs">
+                      <option value="">Select Type</option>
+                      <option value="house">House</option>
+                      <option value="apartment">Apartment</option>
+                      <option value="commercial">Commercial</option>
+                    </select>
                   </div>
                 </div>
+              
+                <!-- Filters Dropdown -->
                 <div class="link-1271983 pos-abs" id="id-1271983">
                   <div class="filters-1271984 pos-abs" id="id-1271984">
-                    <!-- prettier-ignore --><span  class="filters-1271984-0 ">Filters</span>
-                  </div>
-                </div>
-                <div class="button-1271985 pos-abs" id="id-1271985">
-                  <div class="search-1271986 pos-abs" id="id-1271986">
-                    <!-- prettier-ignore --><span  class="search-1271986-0 ">Search</span>
-                  </div>
-                </div>
-                <div class="input-1271979 pos-abs" id="id-1271979"></div>
-                <div class="input-1271980 pos-abs" id="id-1271980">
-                  <div class="divplaceholder-1271981 pos-abs" id="id-1271981">
-                    <div class="enter-keywords-1271982 pos-abs" id="id-1271982">
-                      <!-- prettier-ignore --><span  class="enter-keywords-1271982-0 ">Enter Keywords</span>
+                    <span class="filters-1271984-0">Filters</span>
+                    <div class="filter-options" id="filter-options">
+                      <label><input type="radio" name="filter" value="new"> New</label><br>
+                      <label><input type="radio" name="filter" value="used"> Used</label><br>
+                      <label><input type="radio" name="filter" value="sale"> For Sale</label><br>
                     </div>
                   </div>
                 </div>
-                <div class="presentation-1271978 pos-abs" id="id-1271978"></div>
+              
+                <!-- Search Button -->
+                <button class="button-1271985 pos-abs" id="id-1271985">
+                  <div class="search-1271986 pos-abs" id="id-1271986">
+                    <span class="search-1271986-0" id="search-btn">Search</span>
+                  </div>
+                </button>
+              
+                <!-- Input Field for Keywords -->
+                <div class="input-1271980 pos-abs" id="id-1271980">
+                  <input type="text" id="keyword-input" class="enter-keywords-1271982-0" placeholder="Enter Keywords">
+                </div>
               </div>
+              
             </div>
           </div>
           <div class="heading-2--expl-1271517 pos-abs" id="id-1271517">
@@ -3076,7 +3086,7 @@
           </div>
         </section>
         <!-- Link1 -->
-        <section class="link-1272062 pos-abs" id="id-1272062">
+        <a href="#" class="link-1272062 pos-abs" id="id-1272062">
           <div class="svg-1272063 pos-abs" id="id-1272063">
             <div class="vector-1272064 pos-abs" id="id-1272064">
               <div
@@ -3085,7 +3095,7 @@
               ></div>
             </div>
           </div>
-        </section>
+        </a>
       </div>
     </div>
     <script src="scripts.js"></script>
